@@ -1,0 +1,39 @@
+{
+  "name": "noteapp",
+  "version": "1.0.0",
+  "description": "note app",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "hapi": "^8.8.1",
+    "istanbul": "^0.3.17",
+    "tape": "^4.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.4.0",
+    "tap-nyan": "0.0.2",
+    "tape": "^4.0.1"
+  },
+  "scripts": {
+    "test": "./node_modules/tape/bin/tape test/*.js | tap-nyan && npm run coverage && npm run jshint",
+    "coverage": "istanbul cover ./node_modules/tape/bin/tape ./test/*.js && istanbul check-coverage --statements 100 --functions 100 --lines 100 --branches 100",
+    "jshint": "jshint --exclude-path .gitignore .",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anniva/noteApp.git"
+  },
+  "keywords": [
+    "note",
+    "app"
+  ],
+  "author": "anniva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anniva/noteApp/issues"
+  },
+  "homepage": "https://github.com/anniva/noteApp#readme"
+}

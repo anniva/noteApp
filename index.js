@@ -1,7 +1,7 @@
 var server = require('./api/server.js');
 
 server.start(function() {
-	console.log(server.info.uri);
+	console.log('Server running :', server.info.uri);
 });
 
 module.exports = server;

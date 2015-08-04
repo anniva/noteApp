@@ -11,8 +11,7 @@ server.views({
   engines: {
         html: require('handlebars')
     },
-    path: __dirname + '/../views',
-    layout: true
+    path: __dirname + '/../views'
 });
 
 

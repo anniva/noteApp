@@ -1,5 +1,5 @@
 function landing_handler (request, reply){
-  return reply.view('landing', null, {layout:'landing'});
+  return reply.view('landing');
 }
 
 module.exports = landing_handler;

@@ -1,18 +1,24 @@
-//var MongoClient = require('mongodb').MongoClient;
-//require('dotenv').load();
-var url = process.env.MONGOLAB_URI;
 
-
-
-
-var MongoClient = require('mongodb').MongoClient,
+var url = 'mongodb://localhost:27017/notes',
+    MongoClient = require('mongodb').MongoClient,
     Server = require('mongodb').Server;
 
-var mongoClient = new MongoClient(url);
-  mongoClient.open(function(err, mongoClient) {
-  var db1 = mongoClient.db("mydb");
+module.exports = {
+ createNote:createNote,
+};
 
-  mongoClient.close();
-});
+
+function createNote (id, msg, callback) {
+  MongoClient.connect(url, function (err, db){
+    var notes = db.collection('notes');
+    notes.insert({_id: id, note:msg},
+      function (err, result) {
+        db.close();
+        /* istanbul ignore if */    
+        if (err) { callback(err); } 
+        else { callback(null, result); }
+      });
+  });
+}
 
 

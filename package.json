@@ -7,13 +7,14 @@
     "test": "test"
   },
   "dependencies": {
+    "handlebars": "^3.0.3",
     "hapi": "^8.8.1",
     "istanbul": "^0.3.17",
-    "nodemon": "^1.4.0",
-    "tape": "^4.0.1"
+    "mongodb": "^2.0.39",
+    "nodemon": "^1.4.0"
   },
   "devDependencies": {
-    "nodemon": "^1.4.0",
+    "jshint": "^2.8.0",
     "tap-nyan": "0.0.2",
     "tape": "^4.0.1"
   },

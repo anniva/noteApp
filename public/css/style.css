@@ -1,0 +1,45 @@
+*{
+	font-family: monospace;
+}
+
+#header{
+	font-size: 4em;
+	text-align: center;
+	background-image: url(../img/squareP.jpg);
+}
+
+#intro{
+	margin-right: 2em;
+	margin-left: 2em;
+	margin-top: 8em; 
+}
+
+#intro > h3{
+	font-size: 3em;
+	text-align: center;
+}
+
+#intro > h2{
+	font-size: 3em;
+	text-align: center;
+	color: red;
+}
+
+#intro > p{
+
+	text-align: justify;
+}
+
+.loginPart{
+	margin-top: 20em;
+}
+
+#login > button{
+		font-size: 2em;
+		font-weight: 700;
+		background-color:maroon;
+		color: white;
+		border: solid black 2px;
+		text-decoration: none;
+		margin-top: 4em;
+}

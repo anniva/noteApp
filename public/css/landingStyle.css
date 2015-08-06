@@ -1,0 +1,43 @@
+*{
+	font-family: monospace;
+}
+
+#header{
+	font-size: 4em;
+	text-align: center;
+	background-image: url(../img/squareP.jpg);
+}
+
+#intro{
+	margin: auto;
+}
+
+#intro {
+	margin: auto;
+	}
+
+#intro h3{
+	font-size: 3em;
+	text-align: center;
+}
+
+
+#textInput {
+	height: 20em;
+	width: 80%;
+	margin-right: 10%;
+	margin-left: 10%;
+	display: block;
+}
+
+
+#submitButton{
+	height: 4em;
+	width: 7em;
+	font-weight: 800;
+	font-size: 1.5em;
+	margin-top: 2em;
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+}

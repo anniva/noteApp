@@ -3,6 +3,9 @@ node_js:
 - 0.12
 - 0.1
 
+services:
+- mongodb
+
 env:
   global:
   - MONGOLAB_URI=mongodb://localhost:27017/noteApp

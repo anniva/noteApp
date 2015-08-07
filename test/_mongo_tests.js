@@ -17,12 +17,30 @@ test('mongo createnote function works', function(t) {
 
 test('mongo getNotes function works', function(t) {
   mongo.getNotes('notes',{},url,function (err, result) {
+    //console.log(result);
   var testObject =  { _id: 1438952729880, note: 'testi viesti' } ;
     t.equal(containsTestObject(result.toString(), testObject), true);
     t.end();
   });
 });
 
+test('mongo deleteNotes function works', function(t) {
+  mongo.deleteNotes('notes',{},url,function (err, result) {
+    console.log(result.result.ok);
+    t.equal(result.result.ok, 1);
+    t.end();
+  });
+});
+
+test('mongo deleteNotes  then getNotes returns an empty array', function(t) {
+  mongo.deleteNotes('notes',{},url,function (err, result) {
+    mongo.getNotes('notes',{},url,function (err2, result2) {
+      console.log(result2);
+    t.deepEqual(result2,[]);
+    t.end();
+    });
+  }); 
+});
 
 
 function containsTestObject (x, y) {

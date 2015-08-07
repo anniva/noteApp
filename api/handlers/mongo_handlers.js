@@ -22,60 +22,13 @@ function createNote (id, msg, callback) {
   });
 }
 
-
-function getNotes (id, callback) {
+function getNotes (collection, query, url, callback) {
   MongoClient.connect(url, function (err, db){
-    var notes = db.collection('notes');
-    notes.find({_id: id},
-      function (err, result) {
-        db.close();
-        /* istanbul ignore if */    
-        if (err) { callback(err); } 
-        else { callback(null, result); }
-      });
-  });
-}
-
-
-
-/*
-function getNotes (input, callback) {
-  MongoClient.connect(url, function (err, db){
-    var notes = db.collection('notes');
-    notes.find(input,
-      function (err, result) {
-        db.close();
-        console.log(result);
-        if (err) { callback(err); } 
-        else { callback(null, result); }
-        console.log(result);
-      });
-  });
-}
-
-/*
-function getNotes (input, callback) {
-  MongoClient.connect(url, function (err, db){
-    var notes = db.collection('notes');
-    notes.find(input,
-      function (err, result) {
-        db.close();
-        console.log(result);
-        if (err) { callback(err); } 
-        else { callback(null, result); }
-      });
-  });
-}
-function getNotes (input, callback) {
-  MongoClient.connect(url, function (err, db){
-      db.getCollection(input, function(err, result) {
+    db.collection(collection).find(query).toArray(function(err, result){
       db.close();
+      /* istanbul ignore if */    
       if (err) { callback(err); } 
-      else { callback(null, result); }
+      else { callback(null, result); }    
     });
   });
 }
-
-*/
-
-        /* istanbul ignore if */    

@@ -9,20 +9,22 @@
   "dependencies": {
     "handlebars": "^3.0.3",
     "hapi": "^8.8.1",
-    "istanbul": "^0.3.17",
     "mongodb": "^2.0.39",
     "nodemon": "^1.4.0"
   },
   "devDependencies": {
+    "istanbul": "^0.3.17",
     "jshint": "^2.8.0",
     "tap-nyan": "0.0.2",
     "tape": "^4.0.1"
   },
   "scripts": {
-    "test": "./node_modules/tape/bin/tape test/*.js | tap-nyan && npm run coverage && npm run jshint",
+    "test": "./node_modules/tape/bin/tape test/*.js",
     "coverage": "istanbul cover ./node_modules/tape/bin/tape ./test/*.js && istanbul check-coverage --statements 100 --functions 100 --lines 100 --branches 100",
     "jshint": "jshint --exclude-path .gitignore .",
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "test123": "./node_modules/tape/bin/tape test/*.js | tap-nyan && npm run coverage && npm run jshint"
+
   },
   "repository": {
     "type": "git",

@@ -7,10 +7,9 @@ function landing_handler (request, reply){
     for(var i = 0; i<notes.length; i++){
       content.push(notes[i].note);
     }
-    console.log(notes.length);
 
     return reply.view('landing',{
-      notes:content[0]
+      notes:content
     });
   });
 }

@@ -16,7 +16,7 @@ test('/landing route  should return landing page as expected ', function(t) {
 
 
 
-test('mongo createnote function works', function(t) {
+test('mongo createnote function adds a test message on the page so that content from db can be tested', function(t) {
   var id = Date.now();
   var message= 'qwertyuiop';
   mongo.createNote(id, message, function (err, result) {

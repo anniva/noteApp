@@ -25,8 +25,6 @@ test('mongo getNotes function works', function(t) {
 
 
 
-
-
 function containsTestObject (x, y) {
   return x.indexOf(y) !== -1;
 }

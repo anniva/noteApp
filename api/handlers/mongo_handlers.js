@@ -1,7 +1,7 @@
-
 var url = 'mongodb://localhost:27017/notes',
     MongoClient = require('mongodb').MongoClient,
     Server = require('mongodb').Server;
+
 
 module.exports = {
  createNote:createNote,

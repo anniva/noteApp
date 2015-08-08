@@ -28,11 +28,11 @@ The main reason to build it was to recap some of the skills learned during FAC a
 
 
 ###What next?
-
-* [] Authentication
-* [] Delete notes
-* [] Edit notes
-* [] Styling 
+ 
+* [ ] Authentication
+* [ ] Delete notes
+* [ ] Edit notes
+* [ ] Styling 
 
 
 

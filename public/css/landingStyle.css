@@ -23,14 +23,17 @@
 
 #notes{
 	margin-top: 2em;
+	width: 90%;
+	text-align: center;
 }
 
-#textInput {
+input{
 	height: 20em;
 	width: 80%;
 	margin-right: 10%;
 	margin-left: 10%;
 	display: block;
+	font-size:2em;
 }
 
 
@@ -43,4 +46,9 @@
 	display:block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+#notes li {
+	font-size: 3em;
+	display: block;
 }

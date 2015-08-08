@@ -3,7 +3,7 @@
 [![Code Climate](https://codeclimate.com/github/anniva/noteApp/badges/gpa.svg)](https://codeclimate.com/github/anniva/noteApp)
 
 # noteApp
-Is a very simple webapp -> to recap some thing from FAC
+Is a very simple webapp -> to recap some things from FAC
 Adds notes to a database and retreives all the notes from the database on the page..
 
 Goals -> TDD && 100% test coverage

@@ -48,7 +48,7 @@ input{
 	margin-right: auto;
 }
 
-#notes li {
+#notes p {
 	font-size: 3em;
 	display: block;
 }

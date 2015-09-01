@@ -48,7 +48,8 @@ input{
 	margin-right: auto;
 }
 
-#notes li {
+#notes ul {
 	font-size: 3em;
 	display: block;
+	list-style-type: none;
 }
